@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_7_r9970:10059" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>**Note**: Relay refers here to "Relay Classic", there is no support for "Relay Modern".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070022Z" creationid="Frank" creationdate="20171114T070022Z">
+        <seg>**注意**： 这里的 Relay 指 "Relay Classic", 暂不支持 "Relay Modern".</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>**Status**: Version ``5.0.0`` is released.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T144101Z" creationid="Frank" creationdate="20171111T144101Z">
+        <seg>**状态**:  当前文档对应版本号 ``5.0.0`` .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*3* calls over the network or to a database is much better than *15* calls you will agree.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T032610Z" creationid="Frank" creationdate="20171114T032610Z">
+        <seg>*3* 次网络或DB访问，当然比 *15* 次牛B多了。【译者补】</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A ``DataFetcher`` provides the data for a field (and changes something, if it is a mutation).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T130609Z" creationid="Frank" creationdate="20171111T125020Z">
+        <seg>对象 ``DataFetcher`` 作用是获取字段（field）对应的数据；另外，在修改(mutation)操作时，可以更新数据</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A ``TypeResolver`` helps ``graphql-java`` to decide which type a concrete value belongs to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T132501Z" creationid="Frank" creationdate="20171111T132501Z">
+        <seg>对象 ``TypeResolver`` 帮助 ``graphql-java`` 判断数据的实际类型(type).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A class derived from ``graphql.execution.ExecutionStrategy`` is used to run a query or mutation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T051809Z" creationid="Frank" creationdate="20171113T031544Z">
+        <seg>在执行查询或更新数据时，引擎会使用实现了 ``graphql.execution.ExecutionStrategy``接口 的对象，来决定执行策略.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A common way to do that is use a JSON serialisation library like Jackson or GSON.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135511Z" creationid="Frank" creationdate="20171112T135511Z">
+        <seg>一般用 Jackson or GSON 去做 JSON 序列化.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A data fetcher might look like this:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T063846Z" creationid="Frank" creationdate="20171112T063846Z">
+        <seg>简单 Data fetcher 示例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A detailed tracing map will be created and placed in the ``extensions`` section of the result.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064809Z" creationid="Frank" creationdate="20171114T064809Z">
+        <seg>详细的跟踪信息（ tracing map）会放在查询结果的 ``extensions（扩展）`` 部分。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A good starting point to learn more about mutating data in graphql is `http://graphql.org/learn/queries/#mutations &lt;http://graphql.org/learn/queries/#mutations&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T140656Z" creationid="Frank" creationdate="20171112T140656Z">
+        <seg>如果你不了解什么叫更新（Mutations），建议先阅读规范 `http://graphql.org/learn/queries/#mutations &lt;http://graphql.org/learn/queries/#mutations&gt;`_.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A naive implementation would called a `DataFetcher` to retrieved a person object every time it was invoked.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031054Z" creationid="Frank" creationdate="20171114T031054Z">
+        <seg>一个直接的实现是为每个人物对象（person object）调用一次 `DataFetcher` 去获取数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A number of different strategies are provided with graphql-java and if you are really keen you can even write your own.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T031815Z" creationid="Frank" creationdate="20171113T031815Z">
+        <seg>graphql-java 中已经有几个现成的策略，但如果你需要，你可以写自己的。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A relay-compatible server will need to parse this JSON and pass the ``query`` string to this library as the query and the ``variables`` map as the third argument to ``execute`` as shown below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070750Z" creationid="Frank" creationdate="20171114T070750Z">
+        <seg>relay 兼容的服务器，需要解释 JSON 然后传 ``query`` 字符串到本框架。包括 ``variables`` map 作为 ``execute`` 方法的第3个参数。如下：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A schema defines your GraphQL API by defining each field that can be queried or mutated.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T122945Z" creationid="Frank" creationdate="20171111T113104Z">
+        <seg>Schema的主要用途是定义所有可供查询的字段（field），它们最终组合成一套完整的GraphQL API.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A simple `graphql.schema.visibility.BlockedFields` implementation based on fully qualified field name is provided.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141043Z" creationid="Frank" creationdate="20171113T141043Z">
+        <seg>框架提供了一个可以指定字段(field)名的实现，叫 `graphql.schema.visibility.BlockedFields`..</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Add the repositories:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044906Z" creationid="Frank" creationdate="20171112T044906Z">
+        <seg>增加 repositories:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Add the repository:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T045152Z" creationid="Frank" creationdate="20171112T045152Z">
+        <seg>增加 repository:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Also see the page on subscriptions for more details on how to write a subscription based graphql service.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T133022Z" creationid="Frank" creationdate="20171113T133022Z">
+        <seg>也可以阅读subscriptions的文档，以了解如何编写基于支持订阅的 graphql 服务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Alternatively, schemas with nested lists may benefit from using a ``graphql.execution.batched.BatchedExecutionStrategy`` and creating batched DataFetchers with get() methods annotated @Batched.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T133422Z" creationid="Frank" creationdate="20171113T133422Z">
+        <seg>对于有数组（list）field 的 schemas， 我们提供了 ``graphql.execution.batched.BatchedExecutionStrategy`` 策略。它可以批量化地调用标注了@Batched 的 DataFetchers 的 get() 方法。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An implementation of ``Instrumentation`` needs to implement the "begin" step methods that represent the execution of a graphql query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T063113Z" creationid="Frank" creationdate="20171114T063008Z">
+        <seg>要实现 ``Instrumentation`` ，需要实现多个 "begin" 开头的方法。这方法会在查询执行过程中，每一步骤开始前被调用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Another part of your system can extend this type to add more shape to it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074514Z" creationid="Frank" creationdate="20171114T074514Z">
+        <seg>你的系统的其它模块可以扩展这个类型：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Apollo Support</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070755Z" creationid="Frank" creationdate="20171114T070755Z">
+        <seg>Apollo 支持</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Apollo Tracing Instrumentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064321Z" creationid="Frank" creationdate="20171114T064321Z">
+        <seg>Apollo跟踪与拦截（ Tracing Instrumentation）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Application concerns</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071438Z" creationid="Frank" creationdate="20171114T071438Z">
+        <seg>如何落地应用（Application concerns）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As `graphql` descends each level of the query ( eg as it processes `hero` and then `friends` and then for each their `friends`), the data loader is called to "promise" to deliver a person object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031750Z" creationid="Frank" creationdate="20171114T031750Z">
+        <seg>因 `graphql` 会批量化每个层级的查询。 ( 如先是 `hero` 之后是 `friends` 之后是他们的 `friends`), Data loader 返回了一个 " 期约（promise）"，期约会返回一个 person object.（人物对象）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>AsyncExecutionStrategy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T032108Z" creationid="Frank" creationdate="20171113T032108Z">
+        <seg>异步执行策略（AsyncExecutionStrategy）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>AsyncSerialExecutionStrategy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095642Z" creationid="Frank" creationdate="20171113T095642Z">
+        <seg>异步顺序执行策略（AsyncSerialExecutionStrategy）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Asynchronous Execution</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023113Z" creationid="Frank" creationdate="20171113T023113Z">
+        <seg>异步执行（Asynchronous Execution）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At each level `dataloader.dispatch()` will be called to fire off the batch requests for that part of the query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031943Z" creationid="Frank" creationdate="20171114T031935Z">
+        <seg>在查询的每个层级， `dataloader.dispatch()` 方法均会被调用一次，以获取真实的数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>BatchedExecutionStrategy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T133135Z" creationid="Frank" creationdate="20171113T133135Z">
+        <seg>批量化执行器（BatchedExecutionStrategy）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Before the ``graphql-java`` engine executes a query it must be parsed and validated, and this process can be somewhat time consuming.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141711Z" creationid="Frank" creationdate="20171113T141711Z">
+        <seg> ``graphql-java`` 引擎执行查询前，必须先对查询语句作解释和校验，有时这是比较耗时的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Build and test locally</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072933Z" creationid="Frank" creationdate="20171114T072933Z">
+        <seg>本地构建和测试</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But if you are doing per request data loaders then creating a new set of ``GraphQL`` and ``DataLoader`` objects per request is super cheap.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T061423Z" creationid="Frank" creationdate="20171114T061423Z">
+        <seg>但如用你用请求级的 data loaders ，为每个请求创建 ``GraphQL`` and ``DataLoader`` 是花费很少资源的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But its easy to implement inefficient code with naive loading of a graph of data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030235Z" creationid="Frank" creationdate="20171114T030235Z">
+        <seg>如果用简单直接的方法去获取每个field的数据，可能会效率很低。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By contributing to this project (commenting or opening PR/Issues etc) you are agreeing to follow this conduct, so please take the time to read it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T043006Z" creationid="Frank" creationdate="20171111T145531Z">
+        <seg>为本项目作贡献（提交代码和问题等【译注原文：commenting or opening PR/Issues etc】）的同时，你即同意遵守这个行为规范，所以请你花时间认真阅读它.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default every fields defined in a `GraphqlSchema` is available.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T140314Z" creationid="Frank" creationdate="20171113T140314Z">
+        <seg>所有  `GraphqlSchema` 的字段（field）默认都是可以访问的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default the "query" execution strategy is ``graphql.execution.AsyncExecutionStrategy`` which will dispatch each field as ``CompleteableFuture`` objects and not care which ones complete first.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T052008Z" creationid="Frank" creationdate="20171113T032616Z">
+        <seg>默认的查询 执行策略是 ``graphql.execution.AsyncExecutionStrategy`` ，它会把每个 field 返回视为 ``CompleteableFuture`` 。它并不会控制 filed 的获取顺序.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Caching data</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071701Z" creationid="Frank" creationdate="20171114T071701Z">
+        <seg>缓存数据</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chaining Instrumentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064113Z" creationid="Frank" creationdate="20171114T064113Z">
+        <seg>链式拦截（Chaining Instrumentation）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Check out http://reactivex.io/intro.html to find out more about creating Publishers of data and Subscriptions to that data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145742Z" creationid="Frank" creationdate="20171113T145742Z">
+        <seg>在 http://reactivex.io/intro.html 中可以看到更多创建Publishers 数据 和 Subscriptions 数据的细节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Code of Conduct</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T145014Z" creationid="Frank" creationdate="20171111T145014Z">
+        <seg>贡献或编码的行为规范</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Code wiring via dependency injection</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071813Z" creationid="Frank" creationdate="20171114T071813Z">
+        <seg>依赖注入的编程方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Context Objects</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071936Z" creationid="Frank" creationdate="20171114T071936Z">
+        <seg>上下文对象（Context Objects）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Contributions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072703Z" creationid="Frank" creationdate="20171114T072703Z">
+        <seg>贡献</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Create an instance of preferred cache instance, here is `Caffeine &lt;https://github.com/ben-manes/caffeine&gt;`_  used as it is a high quality caching solution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T142316Z" creationid="Frank" creationdate="20171113T142316Z">
+        <seg>创建你需要的缓存实例，本例子是使用的是 `Caffeine &lt;https://github.com/ben-manes/caffeine&gt;`_  。它是个高质量的缓存解决方案。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating a schema</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T105323Z" creationid="Frank" creationdate="20171111T105323Z">
+        <seg>创建Schema</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Custom Instrumentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T062735Z" creationid="Frank" creationdate="20171114T062735Z">
+        <seg>定制拦截器（Custom Instrumentation）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Data authorisation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071714Z" creationid="Frank" creationdate="20171114T071714Z">
+        <seg>数据权限控制</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Data pagination</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071723Z" creationid="Frank" creationdate="20171114T071723Z">
+        <seg>数据分页</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>DataFetcher and TypeResolver</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124844Z" creationid="Frank" creationdate="20171111T124844Z">
+        <seg>DataFetcher 与 TypeResolver</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Database access</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071649Z" creationid="Frank" creationdate="20171114T071649Z">
+        <seg>数据库访问</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Dependency:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T043815Z" creationid="Frank" creationdate="20171112T043815Z">
+        <seg>依赖:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Documentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T150032Z" creationid="Frank" creationdate="20171111T150032Z">
+        <seg>文档</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Duplicate fields will be merged as one (however field re-definitions into new types are not allowed).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074848Z" creationid="Frank" creationdate="20171114T074848Z">
+        <seg>重复的字段会被合并（但重定义一个字段的类型是不允许的）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each ``DataFetcher`` is passed a ``graphql.schema.DataFetchingEnvironment`` object which contains what field is being fetched, what arguments have been supplied to the field and other information such as the field's parent object, the query root object or the query context object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T064907Z" creationid="Frank" creationdate="20171112T063803Z">
+        <seg>框架在执行查询时。会调用上面的方法，其中的 ``graphql.schema.DataFetchingEnvironment`` 参数包括以下信息：被查询的 field、查询这个field时可能带上的查询参数、这个field的父数据对象(Source Object)、 查询的ROOT数据对象、查询执行上下文环境对象(query context object).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each graphql field type has a ``graphql.schema.DataFetcher`` associated with it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T051848Z" creationid="Frank" creationdate="20171112T051818Z">
+        <seg>每个graphql schema 中的field，都需要绑定相应的 ``graphql.schema.DataFetcher`` 以获取数据.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each step must give back a non null ``graphql.execution.instrumentation.InstrumentationContext`` object which will be called back when the step completes, and will be told that it succeeded or failed with a Throwable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T063925Z" creationid="Frank" creationdate="20171114T063925Z">
+        <seg>所有回调方法，都应该返回 ``graphql.execution.instrumentation.InstrumentationContext`` 对象，这个对象会在本步骤完成时被回调用，回调用时会告知数据的获取结果，如果出错，可以获取 Throwable 对象。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Even though the group of people have a lot of common friends.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031157Z" creationid="Frank" creationdate="20171114T031157Z">
+        <seg>即使这群有有很多相同的朋友。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every contribution to make this project better is welcome: Thank you!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072748Z" creationid="Frank" creationdate="20171114T072748Z">
+        <seg>所有的贡献都是欢迎的。谢谢！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every field definition has a ``DataFetcher``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T125541Z" creationid="Frank" creationdate="20171111T125541Z">
+        <seg>每个字段都有自己的 ``DataFetcher``.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exactly what threading strategy you use is up to your data fetcher code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030033Z" creationid="Frank" creationdate="20171113T030033Z">
+        <seg>而由DataFetcher控制具体的线程并发策略.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T140928Z" creationid="Frank" creationdate="20171111T140928Z">
+        <seg>如:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exceptions while fetching data</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T131256Z" creationid="Frank" creationdate="20171112T125721Z">
+        <seg>当获取数据出现异常时</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Execution</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143601Z" creationid="Frank" creationdate="20171112T045430Z">
+        <seg>执行(Execution)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Execution Strategies</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T031154Z" creationid="Frank" creationdate="20171113T031154Z">
+        <seg>关于执行策略（Execution Strategies）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ExecutorServiceExecutionStrategy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T131706Z" creationid="Frank" creationdate="20171113T131706Z">
+        <seg>基于执行器的执行策略：ExecutorServiceExecutionStrategy </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Feel free to open a new `Issue &lt;https://github.com/graphql-java/graphql-java/issues&gt;`_</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T145659Z" creationid="Frank" creationdate="20171111T145659Z">
+        <seg>请随时提出新 `Issue &lt;https://github.com/graphql-java/graphql-java/issues&gt;`_</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Field Validation Instrumentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065035Z" creationid="Frank" creationdate="20171114T065035Z">
+        <seg>字段校验拦截器（Field Validation Instrumentation）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example `nulls` are important in graphql results and hence you must set up the json mappers to include them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135923Z" creationid="Frank" creationdate="20171112T135923Z">
+        <seg>例如 JSON 的`nulls` 在 graphql 结果中的是有用的。所以必须在 json mappers 中设置需要它</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example imagine you have a ``Interface`` called *MagicUserType* and it resolves back to a series of Java classes called perhaps *Wizard*, *Witch* and *Necromancer*.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T134959Z" creationid="Frank" creationdate="20171111T134959Z">
+        <seg>例如，你有一个 ``Interface`` 叫 *MagicUserType* 它有可能是以下的具体类型（Type） *Wizard*, *Witch* and *Necromancer*.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example imagine your data fetcher threw this exception.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T132935Z" creationid="Frank" creationdate="20171112T132935Z">
+        <seg>例如，你在 DataFetcher 中抛出了这个异常.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example the code above records the underlying exception and stack trace.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T134232Z" creationid="Frank" creationdate="20171112T134232Z">
+        <seg>例如，上面的代码记录了底层的异常和堆栈.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example the edge of your application could be performing user detection and you need that information inside the graphql execution to perform authorisation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072405Z" creationid="Frank" creationdate="20171114T072405Z">
+        <seg>例如，你的应用的边界模块可能会做用户识别，然后 GraphQL 查询执行时，你可以想做数据权限控制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073751Z" creationid="Frank" creationdate="20171114T073751Z">
+        <seg>例如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Getting started</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T043152Z" creationid="Frank" creationdate="20171112T043152Z">
+        <seg>入门</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>GraphQL supports recursive types: For example a ``Person`` can contain a list of friends of the same type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073549Z" creationid="Frank" creationdate="20171114T073549Z">
+        <seg>GraphQL 支持递归类型：如 ``Person（人）`` 可以包含很多朋友【译注：当然这些也是人类型的】</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Graphql subscriptions allow you subscribe to a reactive source and as new data arrives then a graphql query is applied over that data and the results are passed on.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143912Z" creationid="Frank" creationdate="20171113T143912Z">
+        <seg>Graphql 订阅（subscriptions）使你可以让你订阅响应式数据源（reactive source） 。当有新数据时，会发送给订阅者。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Graphql subscriptions allows you to create stateful subscriptions to graphql data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132545Z" creationid="Frank" creationdate="20171113T132545Z">
+        <seg>Graphql 订阅（subscriptions） 使你可以对GraphQL 数据进行为状态的订阅。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HTTP transfer</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071732Z" creationid="Frank" creationdate="20171114T071732Z">
+        <seg>HTTP 转换</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Having one large schema file is not always viable.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073941Z" creationid="Frank" creationdate="20171114T073941Z">
+        <seg>很大的 Schema IDL 文件很难查看。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hello World</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044043Z" creationid="Frank" creationdate="20171112T044043Z">
+        <seg>Hello World【译注：这个用不翻译了吧 :) 】</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here is how you might put this in place:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T033107Z" creationid="Frank" creationdate="20171114T033107Z">
+        <seg>下面就是示例代码：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Here is the code for the standard behaviour.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T131736Z" creationid="Frank" creationdate="20171112T131736Z">
+        <seg>下面是默认的异常行为处理逻辑.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to use the latest build with Gradle</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044833Z" creationid="Frank" creationdate="20171112T044833Z">
+        <seg>如果在 Gradle 中使用最新的开发中版本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to use the latest build with Maven</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T045107Z" creationid="Frank" creationdate="20171112T045107Z">
+        <seg>如果在 Maven 中使用最新的开发中版本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to use the latest release with Gradle</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T045119Z" creationid="Frank" creationdate="20171112T043545Z">
+        <seg>如何在 Gradle 中使用最新正式版本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to use the latest release with Maven</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T045140Z" creationid="Frank" creationdate="20171112T043958Z">
+        <seg>如果在 Maven 中使用最新正式版本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However exactly how they interpret the data result is particular to them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135701Z" creationid="Frank" creationdate="20171112T135701Z">
+        <seg>但他们对结果数据的转换方法有一些不同点.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However plenty of code out there is based on this IDL syntax and hence you can be fairly confident that you are building on solid technology ground.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124436Z" creationid="Frank" creationdate="20171111T124436Z">
+        <seg>但JS参考实现中的很多代码也是基于SDL（IDL）语法的，所以你可以认为这语法是可以长期使用的.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However you will need to fetch your top level domain objects via your own custom data fetchers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T054956Z" creationid="Frank" creationdate="20171112T054923Z">
+        <seg>但你最少需要为顶层的领域对象(domain objects) 编写 data fetchers.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IDL</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T140629Z" creationid="Frank" creationdate="20171111T140629Z">
+        <seg>SDL（IDL）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IDL Example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073326Z" creationid="Frank" creationdate="20171114T073326Z">
+        <seg>IDL（SDL）例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IDL example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124652Z" creationid="Frank" creationdate="20171111T124652Z">
+        <seg>SDL（IDL）例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If ``dataloader`` has seen a data item before, it will have cached the value and will return it without having to ask for it again.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030501Z" creationid="Frank" creationdate="20171114T030501Z">
+        <seg> ``dataloader``会缓存所有加载过的数据，使再次使用相同数据时，不需要再加载。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If a ``graphql.schema.DataFetcher`` returns a ``CompletableFuture&lt;T&gt;`` object then this will be composed into the overall asynchronous query execution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T025701Z" creationid="Frank" creationdate="20171113T025701Z">
+        <seg>如果你编写的 ``graphql.schema.DataFetcher`` 返回 ``CompletableFuture&lt;T&gt;`` 对象，那么它会被糅合到整个异步查询中.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If an exception happens during the data fetcher call, then the execution strategy by default will make a ``graphql.ExceptionWhileDataFetching`` error and add it to the list of errors on the result.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T130528Z" creationid="Frank" creationdate="20171112T125832Z">
+        <seg>如果异步是出现在调用 data fetcher 时, 默认的执行策略(execution strategy) 将生成一个 ``graphql.ExceptionWhileDataFetching`` 错误，并将其加入到查询结果的错误列表中.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If errors are returned during this process then the query execution is aborted and the errors will be in the query result.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065322Z" creationid="Frank" creationdate="20171114T065322Z">
+        <seg>如果校验失败，查询将停止，并返回错误信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the exception you throw is itself a `GraphqlError` then it will transfer the message and custom extensions attributes from that exception into the `ExceptionWhileDataFetching` object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T132529Z" creationid="Frank" creationdate="20171112T132529Z">
+        <seg>如果你抛出的异常本身是  `GraphqlError` 类型，框架会把其中的消息 和 自定义扩展属性（custom extensions attributes）转换到 `ExceptionWhileDataFetching` 对象中.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If this was not in place, then all the promises to data will never be dispatched ot the batch loader function and hence nothing would ever resolve.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T054702Z" creationid="Frank" creationdate="20171114T054702Z">
+        <seg>不然，期约（ promises ） 将不会被执行，就更不会有数据获取了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you are serving web requests then the data can be specific to the user requesting it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T054926Z" creationid="Frank" creationdate="20171114T054926Z">
+        <seg>对于 Web 请求，请求的结果可能会因不同用户而不同的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you are unsure which option to use we recommend the IDL.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124750Z" creationid="Frank" creationdate="20171111T124627Z">
+        <seg>如果你不确认用“java代码”还是用“GraphQL SDL(即IDL)”来定义你的Schema，那么我们建议你用SDL（IDL）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you are using ``graphql``, you are likely to making queries on a graph of data (surprise surprise).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030117Z" creationid="Frank" creationdate="20171114T030117Z">
+        <seg>使用 ``graphql``, 你很可能会去查询图结构的数据（graph of data ） (这可能是句废话).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you have a question or want to discuss anything else related to this project:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T145633Z" creationid="Frank" creationdate="20171111T145633Z">
+        <seg>如果你有问题或想讨论与本项目相关的事:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you have user specific data then you will not want to cache data meant for user A to then later give it to user B in a subsequent request.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T055102Z" creationid="Frank" creationdate="20171114T055102Z">
+        <seg>如果是特定用户的数据，你一定不希望用户A的数据，被用户B查询到。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you use capabilities like `java.util.concurrent.CompletableFuture.supplyAsync()` then you can make it even more efficient by making the the remote calls asynchronous to the rest of the query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T032858Z" creationid="Frank" creationdate="20171114T032858Z">
+        <seg>如果你使用了如 `java.util.concurrent.CompletableFuture.supplyAsync()` 的异步程序方式 。多个field的远程加载数据就可以并发进行了。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If your data can be shared across web requests then you might want to scope your data loaders so they survive longer than the web request say.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T055429Z" creationid="Frank" creationdate="20171114T055429Z">
+        <seg>如果你需要的是不同请求间共享数据，所以你会希望 DataLoader 的生命周期更长。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If your don't specify a data fetcher on a field, this is what will be used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T054623Z" creationid="Frank" creationdate="20171112T054623Z">
+        <seg>如果你未为 field 指定 data fetcher 那么就默认使用它.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Imagine we have the StarWars query outlined below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030543Z" creationid="Frank" creationdate="20171114T030543Z">
+        <seg>假设我们用以下的 StarWars 查询。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Imagine you have an stock market pricing service and you make a graphql subscription to it like this</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144127Z" creationid="Frank" creationdate="20171113T144127Z">
+        <seg>假设你有一个股票服务。可以用这个 graphql 语句来订阅它的数据：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Imagine you start with a type like this in one schema file.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074434Z" creationid="Frank" creationdate="20171114T074434Z">
+        <seg>例如，一开始，你有这样一个文件：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In essence you need to define a ``GraphQLObjectType`` that takes arguments as input.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T015736Z" creationid="Frank" creationdate="20171112T140832Z">
+        <seg>首先，你需要定义一个支持输入参数的 ``GraphQLObjectType`` .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In fact the code above is equivalent to the default settings and is a very sensible choice of execution strategies for most cases.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T051905Z" creationid="Frank" creationdate="20171113T032050Z">
+        <seg>实际上，上面就是引擎默认的策略了。大部分情况下用它就够了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In fact under the covers, the graphql-java engine uses asynchronous execution and makes the ``.execute()`` method appear synchronous by calling join for you.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T024304Z" creationid="Frank" creationdate="20171113T024304Z">
+        <seg>graphql-java引擎内部是异步执行的，但你可以通过调用 join 方法变为同步等待.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In order to achieve high cache hit ration it is recommended that field arguments are passed in as variables instead of directly in the query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143053Z" creationid="Frank" creationdate="20171113T143053Z">
+        <seg>为提高缓存命中率，GraphQL 语句中的 field 参数（arguments）建议使用变量（ variables）来表达，而不是直接把值写在语句中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In order to make this a pleasant as possible for everybody involved, here are some tips:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072832Z" creationid="Frank" creationdate="20171114T072832Z">
+        <seg>为了让大家快乐贡献，以下是一些提示：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the above example there are only *5* unique people mentioned but with caching and batching retrieval in place their will be only *3* calls to the batch loader function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T032430Z" creationid="Frank" creationdate="20171114T032430Z">
+        <seg>上例中，共有 *5* 个独立的 people。但当缓存和批量化开启后，只发起了 *3* 次调用 batch loader 方法的查询操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the above example, the execution will wait for the data fetcher to return before moving on.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T065039Z" creationid="Frank" creationdate="20171112T065039Z">
+        <seg>上面是同步获取数据的例子，执行引擎需要等待一个 data fetcher 返回数据才能继续下一个.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the case below the schema has been split into multiple files and merged all together just before schema generation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074144Z" creationid="Frank" creationdate="20171114T074144Z">
+        <seg>下面的例子是，在 Schema 生成前，合并多个独立的文件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this case it would be *15* calls over the network.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031121Z" creationid="Frank" creationdate="20171114T031121Z">
+        <seg>这样你需要 *15* 次网络调用 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Input arguments can ONLY be of that type and you cannot use output types such as ``GraphQLObjectType``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T022359Z" creationid="Frank" creationdate="20171113T022359Z">
+        <seg>对于修改操作，输入参数只能用这个类型(type)，而不能用如 ``GraphQLObjectType``之类的输出类型(type).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Instrumentation</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T062314Z" creationid="Frank" creationdate="20171114T062314Z">
+        <seg>拦截器Instrumentation</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It asks us to find a hero and their friend's names and their friend's friend's names.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030638Z" creationid="Frank" creationdate="20171114T030638Z">
+        <seg>这查询了一个英雄（ hero）和他朋友的名字，和他朋友的朋友的名字。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It differs from ``AsyncExecutionStrategy`` in that it does not rely on the data fetchers to be asynchronous but rather makes the field fetch invocation asynchronous by submitting each field to the provided `java.util.concurrent.ExecutorService`.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132041Z" creationid="Frank" creationdate="20171113T132041Z">
+        <seg>它与 ``AsyncExecutionStrategy`` 执行策略不同，它不依赖 data fetchers 去异步执行获取任务，它依赖于输入的 `java.util.concurrent.ExecutorService` 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It does not concern itself about other high level application concerns such as the following :</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071642Z" creationid="Frank" creationdate="20171114T071642Z">
+        <seg>它本身不关注应用的其它方面，如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It does not concern itself with sending these over the network on things like web sockets and so on.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145955Z" creationid="Frank" creationdate="20171113T145955Z">
+        <seg>它不关心如何在网络上用 web sockets 或其它手段发送流数据 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It does not have to do *enemies* first followed by *friends*, which would be less efficient.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T094757Z" creationid="Frank" creationdate="20171113T094757Z">
+        <seg>而不需要先发获取 *enemies* 再获取 *friends*，那样效率更低。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It follows the Apollo proposed tracing format defined at `https://github.com/apollographql/apollo-tracing &lt;https://github.com/apollographql/apollo-tracing&gt;`_</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064641Z" creationid="Frank" creationdate="20171114T064641Z">
+        <seg>它按照 Apollo 跟踪格式  `https://github.com/apollographql/apollo-tracing &lt;https://github.com/apollographql/apollo-tracing&gt;`_ 来收集跟踪信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also not opinionated on user authorisation to that data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T055439Z" creationid="Frank" creationdate="20171112T055439Z">
+        <seg>它也不关心你如果授权你的业务数据.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is likely that many of these people will be friends in common.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030752Z" creationid="Frank" creationdate="20171114T030752Z">
+        <seg>很多时候，他们有共同的朋友。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It will however assemble the results in order.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T094907Z" creationid="Frank" creationdate="20171113T094907Z">
+        <seg>这个策略不会按顺序来集成结果数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It would return a result like</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064840Z" creationid="Frank" creationdate="20171114T064840Z">
+        <seg>会返回如下的结果：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its a pretty special case that I don't know how to explain properly</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T133843Z" creationid="Frank" creationdate="20171113T133843Z">
+        <seg>它是如此的特别，让我不知道如何解释【译注：原文：Its a pretty special case that I don't know how to explain properly】</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its the ``GraphQLSchema`` creation that can be expensive, especially if you are using graphql IDL parsing.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T061610Z" creationid="Frank" creationdate="20171114T061610Z">
+        <seg> ``GraphQLSchema`` 的创建是比较耗资源的，特别是用graphql IDL（SDL）解释的时候。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>JSON endoding</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071749Z" creationid="Frank" creationdate="20171114T071749Z">
+        <seg>JSON 编码</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java Example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073332Z" creationid="Frank" creationdate="20171114T073332Z">
+        <seg>Java 例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java code example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124831Z" creationid="Frank" creationdate="20171111T124831Z">
+        <seg>java代码例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>License</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T150009Z" creationid="Frank" creationdate="20171111T150009Z">
+        <seg>发行授权</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Limiting Field Visibility</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T140146Z" creationid="Frank" creationdate="20171113T140146Z">
+        <seg>控制字段的可见性</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Logging</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071140Z" creationid="Frank" creationdate="20171114T071140Z">
+        <seg>日志（Logging）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Logging is done with `SLF4J &lt;http://www.slf4j.org/&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071159Z" creationid="Frank" creationdate="20171114T071159Z">
+        <seg>我们使用 `SLF4J &lt;http://www.slf4j.org/&gt;`_ 来记录日志。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Make sure ``mavenCentral`` is among your repos:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T043653Z" creationid="Frank" creationdate="20171112T043653Z">
+        <seg>首先，保证 ``mavenCentral`` 在你的 repos 库列表中:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Make sure to check out the `awesome related projects &lt;https://github.com/graphql-java/awesome-graphql-java&gt;`_ built on ``graphql-java``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T144504Z" creationid="Frank" creationdate="20171111T144504Z">
+        <seg>强烈推荐你关注一下 基于  ``graphql-java`` 开发的  `相关项目 &lt;https://github.com/graphql-java/awesome-graphql-java&gt;`_ .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Modularising the Schema IDL</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073858Z" creationid="Frank" creationdate="20171114T073858Z">
+        <seg>Schema IDL的模块化</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>More complex query examples can be found in the `StarWars query tests &lt;https://github.com/graphql-java/graphql-java/blob/master/src/test/groovy/graphql/StarWarsQueryTest.groovy&gt;`_</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T051644Z" creationid="Frank" creationdate="20171112T051644Z">
+        <seg>更复杂的示例，可以看 `StarWars 查询测试用例 &lt;https://github.com/graphql-java/graphql-java/blob/master/src/test/groovy/graphql/StarWarsQueryTest.groovy&gt;`_</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mutations</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T140606Z" creationid="Frank" creationdate="20171112T140606Z">
+        <seg>更新（Mutations）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>NOTE: IDL is not currently part of the `formal graphql spec &lt;https://facebook.github.io/graphql/#sec-Appendix-Grammar-Summary.Query-Document&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124037Z" creationid="Frank" creationdate="20171111T123335Z">
+        <seg>注意：SDL（IDL）现在还不是 `官方 graphql 规范 &lt;https://facebook.github.io/graphql/#sec-Appendix-Grammar-Summary.Query-Document&gt;`_. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this puts your server in contravention of the graphql specification and expectations of most clients so use this with caution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141351Z" creationid="Frank" creationdate="20171113T141351Z">
+        <seg>请注意，这会使您的服务器违反graphql规范和大多数客户端的预期，因此请谨慎使用.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Notice how it calls a data store to mutate the backing database and then returns a ``Review`` object that can be used as the output values to the caller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023035Z" creationid="Frank" creationdate="20171113T023035Z">
+        <seg>上面代码，先更新业务数据，然后返回 ``Review`` 对象给调用方.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Notice that the input arguments are of type ``GraphQLInputObjectType``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T021809Z" creationid="Frank" creationdate="20171113T021809Z">
+        <seg>注意，输入参数应该是 ``GraphQLInputObjectType`` 类型.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now the exact details of how you get that stream of events is up to you and you're reactive code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T151201Z" creationid="Frank" creationdate="20171113T151201Z">
+        <seg>如何获取流事件，就由你的 reactive code 来决定 了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Often you can rely on ``graphql.schema.PropertyDataFetcher`` to examine Java POJO objects to provide field values from them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T053937Z" creationid="Frank" creationdate="20171112T053937Z">
+        <seg>很多时候，你可以用默认的 ``graphql.schema.PropertyDataFetcher`` 去从 Java POJO 中自动提取数据到对应的 field.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>One thing to note is the above only works if you use `DataLoaderDispatcherInstrumentation` which makes sure `dataLoader.dispatch()` is called.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T054528Z" creationid="Frank" creationdate="20171114T054528Z">
+        <seg>需要注意的是，只有你使用了 `DataLoaderDispatcherInstrumentation` ，上面说的才会生效。由它来调用  `dataLoader.dispatch()` 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Only the execution of data fetching is free to be in any order.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095400Z" creationid="Frank" creationdate="20171113T095400Z">
+        <seg>只是数据获取的顺序不确定。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Other graphql implementations often call this type of code *resolvers**.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T051935Z" creationid="Frank" creationdate="20171112T051935Z">
+        <seg>其它GraphQL的实现把这叫 *resolvers**.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Per Request Data Loaders</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T054739Z" creationid="Frank" creationdate="20171114T054739Z">
+        <seg>查询范围的 Data Loaders</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Please have a look at the `Manual &lt;http://www.slf4j.org/manual.html&gt;`_ for details.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071224Z" creationid="Frank" creationdate="20171114T071224Z">
+        <seg>详情可以见 `手册 &lt;http://www.slf4j.org/manual.html&gt;`_ 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Please look at `Latest Build &lt;https://bintray.com/andimarek/graphql-java/graphql-java/_latestVersion&gt;`_ for the latest version value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044805Z" creationid="Frank" creationdate="20171112T044805Z">
+        <seg>可以从 `最新版本 &lt;https://bintray.com/andimarek/graphql-java/graphql-java/_latestVersion&gt;`_ 中看到最新的版本号.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Please look at https://github.com/graphql-java/todomvc-relay-java for a full example project,</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070049Z" creationid="Frank" creationdate="20171114T070049Z">
+        <seg>完整的例子，见  https://github.com/graphql-java/todomvc-relay-java 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Please note that this does not cache the result of the query, only the parsed ``Document``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T142130Z" creationid="Frank" creationdate="20171113T142130Z">
+        <seg>它不是缓存 查询结果，只是缓存解释过的文档（ ``Document`` ）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Please note that this project is released with a `Contributor Code of Conduct &lt;https://github.com/graphql-java/graphql-java/blob/master/CODE_OF_CONDUCT.md&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T150201Z" creationid="Frank" creationdate="20171111T145149Z">
+        <seg>请注意，这个项目的发行条款，包括了  `贡献或编码的行为规范 &lt;https://github.com/graphql-java/graphql-java/blob/master/CODE_OF_CONDUCT.md&gt;`_</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Programmatically</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T143115Z" creationid="Frank" creationdate="20171111T143115Z">
+        <seg>JAVA代码定义Schema</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Queries</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143619Z" creationid="Frank" creationdate="20171112T045438Z">
+        <seg>查询(Queries)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Query Caching</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141531Z" creationid="Frank" creationdate="20171113T141531Z">
+        <seg>查询缓存（Query Caching）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Questions and discussions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T145553Z" creationid="Frank" creationdate="20171111T145553Z">
+        <seg>问题与讨论</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Relay Support</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065837Z" creationid="Frank" creationdate="20171114T065837Z">
+        <seg>关于 Relay 支持</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Relay send queries to the GraphQL server as JSON containing a ``query`` field and a ``variables`` field.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070246Z" creationid="Frank" creationdate="20171114T070246Z">
+        <seg>Relay  以 JSON 格式，向服务器发送 ``query`` 和 ``variables`` 两个字段。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Remember graphql allows partial results with errors.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T131344Z" creationid="Frank" creationdate="20171112T131247Z">
+        <seg>请留意，GraphQL 在发生异常时，允许返回部分成功的数据，并将带上异常信息.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Runtime Exceptions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T080557Z" creationid="Frank" creationdate="20171114T020630Z">
+        <seg>运行期异常（Runtime Exceptions ）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Runtime exceptions can be thrown by the graphql engine if certain exceptional situations are encountered.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T020725Z" creationid="Frank" creationdate="20171114T020725Z">
+        <seg>在一些异常的情况下， graphql engine 有可能抛出 Runtime exceptions。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Scalars types are consider both input and output types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T022501Z" creationid="Frank" creationdate="20171113T022501Z">
+        <seg>Scalars 类型(type) 可以用于输入和输出.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See `specification &lt;http://facebook.github.io/graphql/#sec-Normal-evaluation&gt;`_ for details.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095602Z" creationid="Frank" creationdate="20171113T095602Z">
+        <seg>详细见 `规范 &lt;http://facebook.github.io/graphql/#sec-Normal-evaluation&gt;`_ .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See http://graphql.org/blog/subscriptions-in-graphql-and-relay/ for more general details on graphql subscriptions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144005Z" creationid="Frank" creationdate="20171113T144005Z">
+        <seg>可以阅读 http://graphql.org/blog/subscriptions-in-graphql-and-relay/ 来了解订阅的背景知识。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See http://www.reactive-streams.org/ for more information on the reactive ``Publisher`` and ``Subscriber`` interfaces.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132810Z" creationid="Frank" creationdate="20171113T132810Z">
+        <seg>阅读 http://www.reactive-streams.org/ 可以得到关于 ``Publisher`` 和 ``Subscriber`` 接口的更多信息。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See https://github.com/graphql-java/graphql-java-subscription-example for more detailed code on handling network concerns and the like.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T150512Z" creationid="Frank" creationdate="20171113T150512Z">
+        <seg>详见 https://github.com/graphql-java/graphql-java-subscription-example</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Serializing results to JSON</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135038Z" creationid="Frank" creationdate="20171112T135038Z">
+        <seg>序列化成 JSON</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Should be rewritten as:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143119Z" creationid="Frank" creationdate="20171113T143119Z">
+        <seg>应该写成：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So ``graphql.execution.AsyncSerialExecutionStrategy`` is used by default for mutations and will ensure that each field is completed before it processes the next one and so forth.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T100356Z" creationid="Frank" creationdate="20171113T100356Z">
+        <seg>所以，为了确保一个 field 一个 field 顺序地执行更新，更新操作（mutations）默认使用 ``graphql.execution.AsyncSerialExecutionStrategy`` 策略。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So given a query like</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064821Z" creationid="Frank" creationdate="20171114T064821Z">
+        <seg>如以下的查询：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So imagine a query as follows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T094221Z" creationid="Frank" creationdate="20171113T032915Z">
+        <seg>例如以下的查询：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So the following code is in fact the same.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T024956Z" creationid="Frank" creationdate="20171113T024956Z">
+        <seg>下面是等效的代码：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So when the field name matches the Map key or the property name of the source Object, no ``DataFetcher`` is needed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T132327Z" creationid="Frank" creationdate="20171111T132156Z">
+        <seg>所以，当Schema中的field名，与Map中的key值，或 ``Source Object`` 中的 java bean 字段名相同时，不需要为field指定 ``DataFetcher``.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So you can use this mechanism to change that behaviour.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T134949Z" creationid="Frank" creationdate="20171112T134949Z">
+        <seg>你可以用以下的方法去实现.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So you need to turn an `graphql.ExecutionResult` into a JSON payload.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135244Z" creationid="Frank" creationdate="20171112T135244Z">
+        <seg>返回，需要把 `graphql.ExecutionResult` 对象转换为 JSON 格式包.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Some people may prefer not to see that in the output error list.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T134505Z" creationid="Frank" creationdate="20171112T134355Z">
+        <seg>如果你不希望这些出现在输出的错误列表中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Structure your code so that the schema is statically held, perhaps in a static variable or in a singleton IoC component but build out a new ``GraphQL`` set of objects on each request.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T061906Z" creationid="Frank" creationdate="20171114T061906Z">
+        <seg>i在代码中静态引用 schema 。可以是静态变量或 IoC 单件组件。但每次处理请求时，都需要创建 ``GraphQL`` 对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subscription Data Fetchers</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T151512Z" creationid="Frank" creationdate="20171113T150546Z">
+        <seg>关于订阅服务的 Data Fetchers</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subscription Queries</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143648Z" creationid="Frank" creationdate="20171113T143648Z">
+        <seg>订阅查询（Subscription Queries）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subscription Support</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075301Z" creationid="Frank" creationdate="20171114T075301Z">
+        <seg>Subscription（订阅）的支持</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>SubscriptionExecutionStrategy</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132311Z" creationid="Frank" creationdate="20171113T132311Z">
+        <seg>订阅执行策略（SubscriptionExecutionStrategy）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subscriptions</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143454Z" creationid="Frank" creationdate="20171113T143454Z">
+        <seg>订阅（Subscriptions）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subscriptions are not officially specified yet: ``graphql-java`` supports currently a very basic implementation where you can define a subscription in the schema with ``GraphQLSchema.Builder.subscription(...)``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075553Z" creationid="Frank" creationdate="20171114T075443Z">
+        <seg>订阅功能还未在规范中： ``graphql-java`` 现在只支持简单的实现 ，你可以用  ``GraphQLSchema.Builder.subscription(...)`` 在 Schema 中定义订阅。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Teams could contribute "sections" on what is being offered as the total graphql query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075223Z" creationid="Frank" creationdate="20171114T075223Z">
+        <seg>每个团队可以提供自己的字段集，进而合成完整的查询。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>That is important but not a concern of the base graphql-java library.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T150038Z" creationid="Frank" creationdate="20171113T150038Z">
+        <seg>虽然这很重要，但不是作为基础 graphql-java 库应该做的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Controller example shown above works with Apollo too.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071032Z" creationid="Frank" creationdate="20171114T071032Z">
+        <seg>上面的 Controller 例子一样可以与 Apollo 客户端交互。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The GraphQL type system supports the following kind of types:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073232Z" creationid="Frank" creationdate="20171114T073232Z">
+        <seg>GraphQL 类型系统支持以下类型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Graphql IDL type system has another construct for modularising your schema.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074243Z" creationid="Frank" creationdate="20171114T074243Z">
+        <seg>Graphql IDL 还有其它方法去做模块化。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``AsyncExecutionStrategy`` is free to dispatch the *enemies* field at the same time as the *friends* field.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T094434Z" creationid="Frank" creationdate="20171113T094434Z">
+        <seg> ``AsyncExecutionStrategy`` 策略可能会同时发起获取 *enemies* field 和 *friends* field 的操作。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``DataFetcher`` behind a subscription field is responsible for creating the ``Publisher`` of data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T150657Z" creationid="Frank" creationdate="20171113T150657Z">
+        <seg>订阅字段的 ``DataFetcher`` 的职责是生成一个 ``Publisher``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``PreparsedDocumentProvider`` is a functional interface with only a get method and we can therefore pass a method reference that matches the signature into the builder.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T142807Z" creationid="Frank" creationdate="20171113T142807Z">
+        <seg>``PreparsedDocumentProvider`` 是一个函式接口（ functional interface），方法名是get。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``Publisher&lt;ExecutionResult&gt;`` here is the publisher of a stream of events.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145109Z" creationid="Frank" creationdate="20171113T145109Z">
+        <seg>这里的 ``Publisher&lt;ExecutionResult&gt;`` 就是流事件的发布者【译注：原文 publisher of a stream of events】。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``graphql-java`` root Logger name is ``graphql``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071247Z" creationid="Frank" creationdate="20171114T071247Z">
+        <seg>``graphql-java`` 的 root Logger 名字是 ``graphql``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``graphql.execution.ExecutorServiceExecutionStrategy`` execution strategy will always dispatch each field fetch in an asynchronous manner, using the executor you give it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T131913Z" creationid="Frank" creationdate="20171113T131913Z">
+        <seg> ``graphql.execution.ExecutorServiceExecutionStrategy`` 执行策略，使用了指定的执行器（executor），来异步地执行数据获取任务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``graphql.execution.instrumentation.Instrumentation`` interface allows you to inject code that can observe the execution of a query and also change the runtime behaviour.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T062425Z" creationid="Frank" creationdate="20171114T062425Z">
+        <seg>通过实现 ``graphql.execution.instrumentation.Instrumentation`` 接口，你可以在执行查询的过程中注入定制代码。并可以修改运行期的行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The ``query`` field is a JSON string, and the ``variables`` field is a map of variable definitions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070528Z" creationid="Frank" creationdate="20171114T070528Z">
+        <seg>``query`` 字段是一个 JSON 格式的字符串， ``variables`` 字段是一个 变量定义（ variable definitions) 的 map。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The `foo` and `fizz` attributes would be included in the resultant graphql error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T133558Z" creationid="Frank" creationdate="20171112T133558Z">
+        <seg>那么 `foo` and `fizz` 属性将会包含在返回给调用者的graphql查询错误中.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The cache instance should be thread safe and shared.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T142352Z" creationid="Frank" creationdate="20171113T142352Z">
+        <seg>缓存实例应该是线程安全和可以线程间共享的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The code above is written in long form.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030603Z" creationid="Frank" creationdate="20171113T030544Z">
+        <seg>上面是旧的写法，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The data fetcher here is responsible for executing the mutation and returning some sensible output values.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T022711Z" creationid="Frank" creationdate="20171113T022711Z">
+        <seg>对于更新操作，DataFetcher的职责是执行数据更新行返回执行结果.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The data fetchers invoked can themselves return `CompletionStage`` values and this will create fully asynchronous behaviour.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T032843Z" creationid="Frank" creationdate="20171113T032843Z">
+        <seg>Data fetchers 返回 `CompletionStage`` 对象，就可以全异步执行整个查询了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The field selection set will applied to the underlying data and are represented just like any other graphql query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144439Z" creationid="Frank" creationdate="20171113T144439Z">
+        <seg>和其它 graphql 查询一样，只会发送指定的字段 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The final call to ``.join()`` waits for the execution to happen.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023639Z" creationid="Frank" creationdate="20171113T023639Z">
+        <seg>需要你需要同步等待执行结果 ，可以调用 ``.join()`` 方法.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first technique is to merge multiple Schema IDL files into one logic unit.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074053Z" creationid="Frank" creationdate="20171114T074053Z">
+        <seg>方法一是合并多个 Schema IDL 文件到一个逻辑单元（ logic unit）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following are a list of the exceptions that can be thrown all the way out of a ``graphql.execute(...)`` call.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T020804Z" creationid="Frank" creationdate="20171114T020804Z">
+        <seg>下面是调用 ``graphql.execute(...)`` 期间可能出现的异常。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following are great links to read more about this</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071919Z" creationid="Frank" creationdate="20171114T071919Z">
+        <seg>下面是一些相关方案的介绍：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following code uses the standard Java ``java.util.concurrent.ForkJoinPool.commonPool()`` thread executor to supply values in another thread.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030311Z" creationid="Frank" creationdate="20171113T030311Z">
+        <seg>下面示例使用 ``java.util.concurrent.ForkJoinPool.commonPool()`` 并行执行器，用其它线程完成数据获取.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following is a basic custom ``Instrumentation`` that measures overall execution time and puts it into a stateful object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064040Z" creationid="Frank" creationdate="20171114T064040Z">
+        <seg>下面是一个定制的 ``Instrumentation`` 。作用是测量执行时间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following query:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143111Z" creationid="Frank" creationdate="20171113T143111Z">
+        <seg>下面的查询 ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The graphql specification says that mutations MUST be executed serially and in the order in which the query fields occur.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095949Z" creationid="Frank" creationdate="20171113T095949Z">
+        <seg>Graphql 规范指出，修改操作（mutations）“必须”按照 field 的顺序来执行。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The graphql-java engine ensures that all the ``CompletableFuture`` objects are composed together to provide an execution result that follows the graphql specification.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030737Z" creationid="Frank" creationdate="20171113T030737Z">
+        <seg>graphql-java 保证所有 ``CompletableFuture`` 对象组合，最后生成合符 graphql 规范的执行结果.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The graphql-java library concentrates on providing an engine for the execution of queries according to the specification.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071547Z" creationid="Frank" creationdate="20171114T071547Z">
+        <seg>graphql-java 引擎主要的关注点是按 GraphQL 规范来执行查询。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The implementation in this library is based off the `reference implementation &lt;https://github.com/graphql/graphql-js&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124133Z" creationid="Frank" creationdate="20171111T123454Z">
+        <seg>本GraphQL实现，是基于 `已有的JS参考实现 &lt;https://github.com/graphql/graphql-js&gt;`_ 来开发的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The latest development build is available on Bintray.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044659Z" creationid="Frank" creationdate="20171112T044659Z">
+        <seg>最近的开发中版本，可以在 Bintray 上获取.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The most common way to call graphql is over HTTP and to expect a JSON response back.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T135148Z" creationid="Frank" creationdate="20171112T135148Z">
+        <seg>通常，用 HTTP 方法去调用 graphql ，用 JSON 格式作为返回结果.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The mutation is invoked via a query like :</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T020155Z" creationid="Frank" creationdate="20171113T020155Z">
+        <seg>下面是，GraphQL 更新语句的例子 :</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The objects return by this Publisher will be mapped over the graphql query as each arrives and then sent back out as an execution result.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T150851Z" creationid="Frank" creationdate="20171113T150851Z">
+        <seg>这个 Publisher 输出的每一个对象，将会通过 graphql 查询来映射。然后作为执行结果返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The primary use case for this is to allow say performance monitoring and custom logging but it could be used for many different purposes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T062550Z" creationid="Frank" creationdate="20171114T062550Z">
+        <seg>它的主要用途是性能监控和定制日志，但也可以完成其它任务。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The query is now reused regardless of variable values provided.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143302Z" creationid="Frank" creationdate="20171113T143245Z">
+        <seg>这样，这不管查询的变量（variable）如何变化 ，查询解释也就可以重用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The query result will follow the graphql specification and return object values assembled in query field order.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095315Z" creationid="Frank" creationdate="20171113T095315Z">
+        <seg>但查询结果会按GraphQL规范顺序来返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result of a query is an ``ExecutionResult`` which is the query data and/or a list of errors.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T051419Z" creationid="Frank" creationdate="20171112T051419Z">
+        <seg>查询将返回一个 ``ExecutionResult`` 对象，其中包含查询的结果数据 （或出错时的错误信息集合）.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The result of this query is displayed below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030831Z" creationid="Frank" creationdate="20171114T030831Z">
+        <seg>下面是查询的结果。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The runtime wiring contains ``DataFetcher``s, ``TypeResolvers``s and custom ``Scalar``s that are needed to make a fully executable schema.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T141513Z" creationid="Frank" creationdate="20171111T141513Z">
+        <seg>这里的绑定，包括 ``DataFetcher`` ,  ``TypeResolvers`` 与自定义 ``Scalar``.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The scope of your DataLoader instances is important.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T055127Z" creationid="Frank" creationdate="20171114T055127Z">
+        <seg>所以 DataLoader 实例的范围很重要。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The static schema definition file has the field and type definitions but you need a runtime wiring to make it a truly executable schema.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T141541Z" creationid="Frank" creationdate="20171111T141321Z">
+        <seg>由于Schema中只是指定了静态的字段和类型，你还需要把它绑定到java方法中。以让Schema可以运行起来</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The type resolver is responsible for examining a runtime object and deciding what ``GraphqlObjectType`` should be used to represent it and hence what data fetchers and fields will be invoked.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T140412Z" creationid="Frank" creationdate="20171111T140011Z">
+        <seg>Type resolver（类型识别器） 的作用是在运行时识别出 ``GraphqlObjectType`` 的具体类型（Type）。后期具体类型下的field相关的 data fetcher被调用并获取数据.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The use of ``CompletableFuture`` allows you to compose actions and functions that will be applied when the execution completes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023536Z" creationid="Frank" creationdate="20171113T023536Z">
+        <seg>使用 ``CompletableFuture`` 对象，你可以指定，在查询完成后，组合其它操作(action)或函数你的函数.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There are cases where you may want to restrict certain fields depending on the user.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T140602Z" creationid="Frank" creationdate="20171113T140346Z">
+        <seg>但有时候，你可能想不同用户看到不同部分的字段。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is a another way to wiring in type resolvers and data fetchers and that is via the ``WiringFactory`` interface.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T143357Z" creationid="Frank" creationdate="20171111T142647Z">
+        <seg>还有一个方法， 可以绑定type resolvers 和 data fetchers，就是使用 ``WiringFactory`` .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is a helpful shortcut in graphql-java to create asynchronous data fetchers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030922Z" creationid="Frank" creationdate="20171113T030922Z">
+        <seg>还有一个方法可以简化异步 data fetchers 的编写.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is also another implementation that prevents instrumentation from being able to be performed on your schema, if that is a requirement.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141217Z" creationid="Frank" creationdate="20171113T141217Z">
+        <seg>如果你需要，还有一个实现可以防止 instrumentation 拦截你的 schema。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is no special support for `Apollo &lt;https://github.com/apollographql/apollo-client&gt;`_ included: Apollo works with any schema.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T070936Z" creationid="Frank" creationdate="20171114T070936Z">
+        <seg>没有为对接 `Apollo &lt;https://github.com/apollographql/apollo-client&gt;`_   客户端做什么。因它兼容所有schema。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>These are not graphql errors in execution but rather totally unacceptable conditions in which to execute a graphql query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T021024Z" creationid="Frank" creationdate="20171114T021024Z">
+        <seg>他们不是执行 graphql 查询中发生的异常。 但还是不能被忽略。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They will be combined in the order in which they are encountered.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074845Z" creationid="Frank" creationdate="20171114T074845Z">
+        <seg>它们会以被发现的顺序组合起来。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allow for a more dynamic runtime wiring since the IDL definitions can be examined in order to decide what to wire in.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T142748Z" creationid="Frank" creationdate="20171111T142748Z">
+        <seg>这可以让你用编程来控制绑定逻辑.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This allows you to place your own custom attributes into the graphql error that is sent back to the caller.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T132809Z" creationid="Frank" creationdate="20171112T132809Z">
+        <seg>这可以方便你把自己的错误信息，放到返回给调用者的 GraphQL 错误列表中.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This behaviour is allowed in the graphql specification and in fact is actively encouraged http://facebook.github.io/graphql/#sec-Query for read only queries.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T095516Z" creationid="Frank" creationdate="20171113T095516Z">
+        <seg>对于查询，这个策略是 graphql 规范 http://facebook.github.io/graphql/#sec-Query 允许和推荐的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This behaviour makes it unsuitable to be used as a mutation execution strategy.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132239Z" creationid="Frank" creationdate="20171113T132239Z">
+        <seg>因为这样，所以它不能用于更新(mutation)操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be used with static imports to produce more readable code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T031119Z" creationid="Frank" creationdate="20171113T031119Z">
+        <seg>这样可以使用 static imports 来提高代码可读性.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This enables you to handle a subscription request:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075523Z" creationid="Frank" creationdate="20171114T075523Z">
+        <seg>这使你可以处理订阅请求。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a GraphQL Java implementation based on the `specification &lt;https://github.com/facebook/graphql&gt;`_ and the JavaScript `reference implementation &lt;https://github.com/graphql/graphql-js&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T143958Z" creationid="Frank" creationdate="20171111T143958Z">
+        <seg>这是一个用Java实现的GraphQL。基于 `GraphQL规范 &lt;https://github.com/facebook/graphql&gt;`_ 和  `JavaScript参考实现 &lt;https://github.com/graphql/graphql-js&gt;`_.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is especially useful at the top level.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075030Z" creationid="Frank" creationdate="20171114T075030Z">
+        <seg>这在顶层查询中特别有用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is important.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T022221Z" creationid="Frank" creationdate="20171113T022221Z">
+        <seg>请留意.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is needed for ``Interface`` and ``Union``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T140050Z" creationid="Frank" creationdate="20171111T132646Z">
+        <seg>所以 ``Interface`` 和 ``Union`` 均需要指定关联的 ``TypeResolver(类型识别器)`` .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is the famous "hello world" in ``graphql-java``:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044253Z" creationid="Frank" creationdate="20171112T044253Z">
+        <seg>下面就用 ``graphql-java`` 来实现经典的  "hello world"  :</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This made up example shows how you can pass yourself information to help execute your queries.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072544Z" creationid="Frank" creationdate="20171114T072544Z">
+        <seg>下面例子演示怎么向你的查询传递信息：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means you can fire off a number of field fetching requests in parallel.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T025832Z" creationid="Frank" creationdate="20171113T025832Z">
+        <seg>这样，你可以同时发起我个数据获取操作，让它们并行运行.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This might involve making a database call or contacting another system over HTTP say.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T055151Z" creationid="Frank" creationdate="20171112T055151Z">
+        <seg>其中可以会与database交互，或用HTTP与其它系统交互.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This strategy allows for the most performant execution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T032648Z" creationid="Frank" creationdate="20171113T032648Z">
+        <seg>这个策略可以优化查询执行的性能.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will ensure that the result follows the specification outlined in http://facebook.github.io/graphql/#sec-Response</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T140413Z" creationid="Frank" creationdate="20171112T140413Z">
+        <seg>这样就可以确保返回数据合符在 http://facebook.github.io/graphql/#sec-Response 中的规范</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will make it even more timely since multiple calls can happen at once if need be.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T033034Z" creationid="Frank" creationdate="20171114T033034Z">
+        <seg>这可以让查询更快，因一次并发了多个远程调用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Those arguments are what you can use to mutate your data store via the data fetcher invoked.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T015920Z" creationid="Frank" creationdate="20171113T015630Z">
+        <seg>在更新数据时，框架会带上这些参数去调用 data fetcher.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To avoid the need for re-parse/validate the ``GraphQL.Builder`` allows an instance of ``PreparsedDocumentProvider`` to reuse ``Document`` instances.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141844Z" creationid="Frank" creationdate="20171113T141844Z">
+        <seg>为了避免重复的解释和校验。 ``GraphQL.Builder`` 可以使用``PreparsedDocumentProvider``去重用 ``Document`` 实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To be able to declare such a type, ``graphql-java`` has a ``GraphQLTypeReference`` class.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073636Z" creationid="Frank" creationdate="20171114T073636Z">
+        <seg>为了方便声明这种情况， ``graphql-java`` 有一个 ``GraphQLTypeReference`` 类。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To ensure you get a JSON result that confirms 100% to the graphql spec, you should call `toSpecification` on the result and then send that back as JSON.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T140213Z" creationid="Frank" creationdate="20171112T140213Z">
+        <seg>为保证你返回的 JSON 结果 100% 合符 graphql 规范, 应该调用result对象的 `toSpecification` 方法，然后以 JSON格式 发送响应.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To execute a query against a schema build a new ``GraphQL`` object with the appropriate arguments and then call ``execute()``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T050321Z" creationid="Frank" creationdate="20171112T050321Z">
+        <seg>为了对 一个Schema  执行查询。需要先构造一个 ``GraphQL`` 对象，并带着一些参数去调用 ``execute()`` 方法.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Type References (recursive types)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073424Z" creationid="Frank" creationdate="20171114T073424Z">
+        <seg>类型引用 （Type References） (递归类型recursive types)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Types</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073210Z" creationid="Frank" creationdate="20171114T073210Z">
+        <seg>类型（Types）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Use ``graphql.schema.AsyncDataFetcher.async(DataFetcher&lt;T&gt;)`` to wrap a ``DataFetcher``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030956Z" creationid="Frank" creationdate="20171113T030956Z">
+        <seg>使用 ``graphql.schema.AsyncDataFetcher.async(DataFetcher&lt;T&gt;)`` 去包装``DataFetcher``.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using Dataloader</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022853Z" creationid="Frank" creationdate="20171114T022853Z">
+        <seg>使用 Dataloader</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using ``java-dataloader`` will help you to make this a more efficient process by both caching and batching requests for that graph of data items.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030349Z" creationid="Frank" creationdate="20171114T030349Z">
+        <seg>使用 ``java-dataloader`` 可以帮助你更有效地缓存和批量化数据加载操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the latest development build</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T044448Z" creationid="Frank" creationdate="20171112T044448Z">
+        <seg>如何使用最新的开发中版本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Very basic support for `Relay &lt;https://github.com/facebook/relay&gt;`_ is included.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065931Z" creationid="Frank" creationdate="20171114T065931Z">
+        <seg>包含了一些基础的 `Relay &lt;https://github.com/facebook/relay&gt;`_  特性的支持。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We have a public chat room (Gitter.im) for graphql-java: https://gitter.im/graphql-java/graphql-java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T145939Z" creationid="Frank" creationdate="20171111T145939Z">
+        <seg>我们为graphql-java，准备了一个公开的聊天室 (Gitter.im) : https://gitter.im/graphql-java/graphql-java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We have put together a basic example of using websockets (backed by Jetty) with a simulated stock price application that is built using RxJava.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T150438Z" creationid="Frank" creationdate="20171113T150438Z">
+        <seg>我们编写了一个 websockets 的(基于 Jetty)  模拟股票报价的示例应用。它使用了 RxJava。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Welcome to graphql-java</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T143511Z" creationid="Frank" creationdate="20171111T143511Z">
+        <seg>欢迎使用 graphql-java</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What is special is that the initial result of a subscription query is a reactive-streams ``Publisher`` object which you need to use to get the future values.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144737Z" creationid="Frank" creationdate="20171113T144737Z">
+        <seg>不同的是，一开始的查询结果是一个响应式流（reactive-streams） ``Publisher（流发布者）`` 对象。通过对象可以获取未来的数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When defining a schema via IDL, you provide the needed ``DataFetcher`` and ``TypeResolver`` when the schema is created:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T140923Z" creationid="Frank" creationdate="20171111T140923Z">
+        <seg>当使用SDL方法来开发时，你需要同时编写对应的 ``DataFetcher`` 和 ``TypeResolver``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When one is not configured, a `PropertyDataFetcher &lt;https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/schema/PropertyDataFetcher.java&gt;`_ is used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T125742Z" creationid="Frank" creationdate="20171111T125742Z">
+        <seg>如果未为字段指定DataFetcher, 那么自动使用默认的 `PropertyDataFetcher &lt;https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/schema/PropertyDataFetcher.java&gt;`_ .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the schema is created programmatically you provide the ``DataFetcher`` and ``TypeResolver`` when the type is created:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073203Z" creationid="Frank" creationdate="20171114T073203Z">
+        <seg>如果用程序方式来定义 Schema，在创建类型（type）的时候，你需要提供 ``DataFetcher`` and ``TypeResolver` 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the schema is created, the ``GraphQLTypeReference`` is replaced with the actual real type Object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073748Z" creationid="Frank" creationdate="20171114T073748Z">
+        <seg>在实际的 Schema 创建时，``GraphQLTypeReference`` 会变为实际的类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the schema is declared via IDL, no special handling of recursive types is needed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073842Z" creationid="Frank" creationdate="20171114T073804Z">
+        <seg>如果用SDL（ID L）来定义 Schema ，不需要特殊的处理。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you build the ```Graphql`` object you can specify what ``Instrumentation`` to use (if any).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T062633Z" creationid="Frank" creationdate="20171114T062633Z">
+        <seg>当创建 ```Graphql`` 对象时，可以绑定相关的 ``Instrumentation`` 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With Java 8 lambdas it can be written more succinctly as follows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T030555Z" creationid="Frank" creationdate="20171113T030555Z">
+        <seg>也可以用Java 8 lambdas 的写法：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With `dataloader` you can make the `graphql` query much more efficient.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T031237Z" creationid="Frank" creationdate="20171114T031237Z">
+        <seg>使用 `dataloader` 可以让 `graphql` 查询更高效。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With all these type extensions in place the `Human` type now looks like this at runtime.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074919Z" creationid="Frank" creationdate="20171114T074919Z">
+        <seg>完成合并后的 `Human` 类型会是这样的：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>With caching turned on (the default) then any previously returned person will be returned as is for no cost.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T032154Z" creationid="Frank" creationdate="20171114T032154Z">
+        <seg>当开启了缓存功能时 (默认开启)，将直接返回之前加载过的 person，而不会再发起一次查询。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You are now writing reactive-streams code to consume a series of ``ExecutionResults``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145453Z" creationid="Frank" creationdate="20171113T145453Z">
+        <seg>需要编写 reactive-streams 代码去消费一源源不断的 ``ExecutionResults``。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can change this behaviour by creating your own ``graphql.execution.DataFetcherExceptionHandler`` exception handling code and giving that to the execution strategy.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T133824Z" creationid="Frank" creationdate="20171112T133824Z">
+        <seg>你可以编写自己的 ``graphql.execution.DataFetcherExceptionHandler`` 来改变这些逻辑。只需要在执行策略（execution strategy）注册一下.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can combine multiple ``Instrumentation`` objects together using the ``graphql.execution.instrumentation.ChainedInstrumentation`` class which accepts a list of ``Instrumentation`` objects and calls them in that defined order.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064253Z" creationid="Frank" creationdate="20171114T064253Z">
+        <seg>你可以用  ``graphql.execution.instrumentation.ChainedInstrumentation``  把多个 ``Instrumentation`` 连接起来。这些 ``Instrumentation`` 对象会按顺序被调用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can create your own derivation of `GraphqlFieldVisibility` to check what ever you need to do to work out what fields should be visible or not.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T141435Z" creationid="Frank" creationdate="20171113T141435Z">
+        <seg>你可以编写自己的 `GraphqlFieldVisibility` 来控制字段的可见性。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can do this by using a `graphql.schema.visibility.GraphqlFieldVisibility` implementation and attaching it to the schema.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T140852Z" creationid="Frank" creationdate="20171113T140852Z">
+        <seg>你可以在schema 上绑定一个 `graphql.schema.visibility.GraphqlFieldVisibility` 对象。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can get the ``CompleteableFuture`` to results by calling ``executeAsync()`` like this</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023300Z" creationid="Frank" creationdate="20171113T023300Z">
+        <seg>如下，调用 ``executeAsync()`` 后，返回  ``CompleteableFuture`` ：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can have as many extensions as you think sensible.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074834Z" creationid="Frank" creationdate="20171114T074727Z">
+        <seg>你可以按你的需要去扩展。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can make execution of the ``DataFetcher`` asynchronous by returning a ``CompletionStage`` to data, that is explained more further down this page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T125551Z" creationid="Frank" creationdate="20171112T065149Z">
+        <seg>也可以通过编写异步的 ``DataFetcher`` ，异步地返回 ``CompletionStage`` 对象，在下文中将会说明使用方法.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can make you own custom implementation of ``FieldValidation`` or you can use the ``SimpleFieldValidation`` class to add simple per field checks rules.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065447Z" creationid="Frank" creationdate="20171114T065447Z">
+        <seg>你可以编写自己的``FieldValidation`` 实现，或者直接用 ``SimpleFieldValidation`` 去为每个field定义校验逻辑。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can modularise you schema using two techniques.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073957Z" creationid="Frank" creationdate="20171114T073957Z">
+        <seg>所以我们有两种方法可以模块化 Schema。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can pass in a context object during query execution that will allow you to better invoke that business logic.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T072133Z" creationid="Frank" creationdate="20171114T072133Z">
+        <seg>为更方便的业务调用，你可以在查询执行中加入Context Object。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can see more details on reactive-streams code here http://www.reactive-streams.org/</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145550Z" creationid="Frank" creationdate="20171113T145550Z">
+        <seg>你可以在 http://www.reactive-streams.org/ 中看到更 reactive-streams 代码的编写细节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can see that Han, Leia, Luke and R2-D2 are a tight knit bunch of friends and share many friends in common.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T030941Z" creationid="Frank" creationdate="20171114T030941Z">
+        <seg>你可以看到，Han, Leia, Luke 和 R2-D2 是一群紧密的朋友。他们有很多共同的朋友。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can still return ``CompletionStage`` objects in the mutation data fetchers, however they will be executed serially and will be completed before the next mutation field data fetcher is dispatched.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T131555Z" creationid="Frank" creationdate="20171113T131540Z">
+        <seg>你的 mutation Data Fetcher 仍然可以返回 ``CompletionStage`` 对象, 但它和其它 field 的是串行执行的。  </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can use `type extensions` to add extra fields and interfaces to a type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T074324Z" creationid="Frank" creationdate="20171114T074324Z">
+        <seg>你可以使用 `type extensions` 去为现有类型增加字段和 interface。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can use extension types to add new fields to the top level schema "query".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T075112Z" creationid="Frank" creationdate="20171114T075112Z">
+        <seg>你可以用 extension types 去为顶层 "query" 增加字段</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can wire in what execution strategy to use when you create the ``GraphQL`` object.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T031856Z" creationid="Frank" creationdate="20171113T031856Z">
+        <seg>你可以这样给 ``GraphQL`` 对象绑定执行策略。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You could for example look at IDL directives to help you decide what runtime to create or some other aspect of the IDL definition.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T143036Z" creationid="Frank" creationdate="20171111T143036Z">
+        <seg>你可以根据SDL（IDL）的声明，来决定用你的绑定行为.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You could generate an executable schema via</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T141010Z" creationid="Frank" creationdate="20171111T141010Z">
+        <seg>用以下代码来让schema运行起来</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You data fetcher is going to look something like this.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T151042Z" creationid="Frank" creationdate="20171113T151042Z">
+        <seg>你会像这样子去编写Data Fetcher：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You might want to create them per web request to ensure data is only cached within that web request and no more.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T055256Z" creationid="Frank" creationdate="20171114T055256Z">
+        <seg>这时，你需要对每个 Request 创建一个新的 DataLoader，来保证它只在当前请求中生效。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You need to push these concerns into your business logic layers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T071848Z" creationid="Frank" creationdate="20171114T071848Z">
+        <seg>你需要在自己的业务逻辑层中实现这些。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You need to send in arguments during that mutation operation, in this case for the variables for ``$ep`` and ``$review``</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T020439Z" creationid="Frank" creationdate="20171113T020439Z">
+        <seg>修改操作是需要带输入参数的，上例中对应变量 ``$ep`` and ``$review``</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You need to subscribe to this with your processing code which will look something like the following</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145331Z" creationid="Frank" creationdate="20171113T145331Z">
+        <seg>你需要编写你自己的流处理代码，如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You need to use ``SubscriptionExecutionStrategy`` as your execution strategy as it has the support for the reactive-streams APIs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144908Z" creationid="Frank" creationdate="20171113T144908Z">
+        <seg>你需要使用 ``SubscriptionExecutionStrategy`` 策略作为执行策略（execution strategy）。因为它支持 reactive-streams APIs.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You should push all that logic into your business logic layer code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T055535Z" creationid="Frank" creationdate="20171112T055535Z">
+        <seg>你应该在自己的业务逻辑层，去实现这些逻辑.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You uses ``SubscriptionExecutionStrategy`` as your execution strategy as it has the support for the reactive-streams APIs.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T132649Z" creationid="Frank" creationdate="20171113T132649Z">
+        <seg>你可以使用 ``SubscriptionExecutionStrategy`` 执行策略，它支持 reactive-streams APIs。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You wire this together using this builder pattern</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T142042Z" creationid="Frank" creationdate="20171111T142042Z">
+        <seg>用下页的Builder方法，就可以绑定Schema和Java程序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You would create types like this to handle this mutation :</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T021438Z" creationid="Frank" creationdate="20171113T021438Z">
+        <seg>对应地，Schema 应该这么写【译注：以下是 Java 写法，你也可以用SDL写法】 :</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``PropertyDataFetcher`` fetches data from ``Map`` and Java Beans.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T131056Z" creationid="Frank" creationdate="20171111T131056Z">
+        <seg>``PropertyDataFetcher`` 从 ``Map`` 和 Java Beans 中获取数据.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``RxJava`` is a popular implementation of reactive-streams.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145628Z" creationid="Frank" creationdate="20171113T145628Z">
+        <seg>``RxJava``是这个流行的 reactive-streams 实现。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql-java`` is not opinionated about how you get your domain data objects, that is very much your concern.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T055544Z" creationid="Frank" creationdate="20171112T055353Z">
+        <seg>``graphql-java`` 不关心你如何获取你的业务数据，这是你的自己.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql-java`` offers two different ways of defining the schema: Programmatically as Java code or via a special graphql dsl (called IDL).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124759Z" creationid="Frank" creationdate="20171111T123155Z">
+        <seg>“graphql-java”提供两种方法来定义Schema。用java代码来定义、用GraphQL SDL(即IDL)来定义。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql-java`` requires at least Java 8.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171112T043220Z" creationid="Frank" creationdate="20171112T043220Z">
+        <seg>``graphql-java`` 需要运行于 Java 8 或更高版本.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql-java`` supports the following Scalars:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T073254Z" creationid="Frank" creationdate="20171114T073254Z">
+        <seg>``graphql-java`` 支持以下基本数据类型（ Scalars）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql.execution.instrumentation.fieldvalidation.FieldValidationInstrumentation`` is an ``Instrumentation`` implementation that can be used to validate fields and their arguments before query execution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T065650Z" creationid="Frank" creationdate="20171114T065202Z">
+        <seg>``graphql.execution.instrumentation.fieldvalidation.FieldValidationInstrumentation`` 拦截器，可以在执行查询前校验字段和字段参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql.execution.instrumentation.tracing.TracingInstrumentation`` is an ``Instrumentation`` implementation that creates tracing information about the query that is being executed.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T064459Z" creationid="Frank" creationdate="20171114T064459Z">
+        <seg>``graphql.execution.instrumentation.tracing.TracingInstrumentation`` 是一个可以收集跟踪信息的拦截器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>graphql subscriptions allow a stream of ``ExecutionResult`` objects to be sent down each time the stock price changes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T144348Z" creationid="Frank" creationdate="20171113T144348Z">
+        <seg>股票价格变化时，graphql 订阅 可以把 ``ExecutionResult`` 对象以流的方式传送给订阅者。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>graphql-java gives you a way to map the graphql query fields over that stream of objects just like a standard graphql query.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T151416Z" creationid="Frank" creationdate="20171113T151416Z">
+        <seg>graphql-java 会帮助你从流对象中获取 graphql 字段（fields）。像一般的 graphql 查询一样。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>graphql-java only produces a stream of results.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T145813Z" creationid="Frank" creationdate="20171113T145813Z">
+        <seg>graphql-java 只是产出一个流对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>graphql-java uses fully asynchronous execution techniques when it executes queries.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T023203Z" creationid="Frank" creationdate="20171113T023203Z">
+        <seg>graphql-java 是个全异步的执行引擎.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown as a general purpose runtime exception, for example if the code cant access a named field when examining a POJO, it is analogous to a RuntimeException if you will.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022455Z" creationid="Frank" creationdate="20171114T022455Z">
+        <seg>这个是通用的异常。如不能访问 POJO 的 field。这可以等同于 RuntimeException。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown as a low level code assertion exception for truly unexpected code conditions, things we assert</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022557Z" creationid="Frank" creationdate="20171114T022557Z">
+        <seg>这是内部断言的预计外异常</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown if a  graphql.schema.TypeResolver` fails to provide a concrete object type given a interface or union type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T021734Z" creationid="Frank" creationdate="20171114T021734Z">
+        <seg>当  graphql.schema.TypeResolver` 不能判断抽象对象（ interface or union type）  的实际类型（ concrete object type） 时发生这个异常。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown if a map used for an input type object contains more keys than is defined in that input type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022203Z" creationid="Frank" creationdate="20171114T022203Z">
+        <seg>可以输入对象（ input type object ）包含了未在Schema中定义的field。就会发生上面异常。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown if a non null variable argument is coerced as a null value during execution.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022009Z" creationid="Frank" creationdate="20171114T022009Z">
+        <seg>如果 个不允许为 null 的参数，被赋值为 null。会抛出上面异常。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown if the schema is not valid when built via</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022313Z" creationid="Frank" creationdate="20171114T022244Z">
+        <seg>表示在运行下面函数时， Schema 校验失败。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown when a value cannot be parsed by a Scalar type, for example a String input value being parsed as an Int.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T021529Z" creationid="Frank" creationdate="20171114T021529Z">
+        <seg>发生这类型的异常，原因是解释输入的 Scalar 时出错 ，如 int 参数的实际输入值是一个 String。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>is thrown when a value cannot be serialised by a Scalar type, for example a String value being coerced as an Int.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T021359Z" creationid="Frank" creationdate="20171114T021327Z">
+        <seg>发生这类型的异常，原因是序列化Scalar时出错。如 Int 字段获取到 String 值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>on how BatchedExecutionStrategy works here.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T133717Z" creationid="Frank" creationdate="20171113T133717Z">
+        <seg>关于 BatchedExecutionStrategy 是如何工作的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>should never happen in practice.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171114T022647Z" creationid="Frank" creationdate="20171114T022647Z">
+        <seg>事实上不应该发生【译注：如果抛出了，可能是框架有BUG了。】</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>with variables:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171113T143129Z" creationid="Frank" creationdate="20171113T143129Z">
+        <seg>带上参数（ variables）：</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>

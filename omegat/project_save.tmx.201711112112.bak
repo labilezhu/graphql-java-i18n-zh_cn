@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_7_r9970:10059" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A ``DataFetcher`` provides the data for a field (and changes something, if it is a mutation).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T130609Z" creationid="Frank" creationdate="20171111T125020Z">
+        <seg>对象 ``DataFetcher`` 作用是获取字段（field）对应的数据；另外，在修改(mutation)操作时，可以更新数据</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A schema defines your GraphQL API by defining each field that can be queried or mutated.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T122945Z" creationid="Frank" creationdate="20171111T113104Z">
+        <seg>Schema的主要用途是定义所有可供查询的字段（field），它们最终组合成一套完整的GraphQL API.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating a schema</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T105323Z" creationid="Frank" creationdate="20171111T105323Z">
+        <seg>创建Schema</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>DataFetcher and TypeResolver</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124844Z" creationid="Frank" creationdate="20171111T124844Z">
+        <seg>DataFetcher 与 TypeResolver</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Every field definition has a ``DataFetcher``.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T125541Z" creationid="Frank" creationdate="20171111T125541Z">
+        <seg>每个字段都有自己的 ``DataFetcher``.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However plenty of code out there is based on this IDL syntax and hence you can be fairly confident that you are building on solid technology ground.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124436Z" creationid="Frank" creationdate="20171111T124436Z">
+        <seg>但JS参考实现中的很多代码也是基于SDL（IDL）语法的，所以你可以认为这语法是可以长期使用的.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>IDL example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124652Z" creationid="Frank" creationdate="20171111T124652Z">
+        <seg>SDL（IDL）例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you are unsure which option to use we recommend the IDL.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124750Z" creationid="Frank" creationdate="20171111T124627Z">
+        <seg>如果你不确认用“java代码”还是用“GraphQL SDL(即IDL)”来定义你的Schema，那么我们建议你用SDL（IDL）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Java code example:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124831Z" creationid="Frank" creationdate="20171111T124831Z">
+        <seg>java代码例子：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>NOTE: IDL is not currently part of the `formal graphql spec &lt;https://facebook.github.io/graphql/#sec-Appendix-Grammar-Summary.Query-Document&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124037Z" creationid="Frank" creationdate="20171111T123335Z">
+        <seg>注意：SDL（IDL）现在还不是 `官方 graphql 规范 &lt;https://facebook.github.io/graphql/#sec-Appendix-Grammar-Summary.Query-Document&gt;`_. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The implementation in this library is based off the `reference implementation &lt;https://github.com/graphql/graphql-js&gt;`_.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124133Z" creationid="Frank" creationdate="20171111T123454Z">
+        <seg>本GraphQL实现，是基于 `已有的JS参考实现 &lt;https://github.com/graphql/graphql-js&gt;`_ 来开发的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When one is not configured, a `PropertyDataFetcher &lt;https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/schema/PropertyDataFetcher.java&gt;`_ is used.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T125742Z" creationid="Frank" creationdate="20171111T125742Z">
+        <seg>如果未为字段指定DataFetcher, 那么自动使用默认的 `PropertyDataFetcher &lt;https://github.com/graphql-java/graphql-java/blob/master/src/main/java/graphql/schema/PropertyDataFetcher.java&gt;`_ .</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``PropertyDataFetcher`` fetches data from ``Map`` and Java Beans.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T131056Z" creationid="Frank" creationdate="20171111T131056Z">
+        <seg>``PropertyDataFetcher`` 从 ``Map`` 和 Java Beans 中获取数据.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>``graphql-java`` offers two different ways of defining the schema: Programmatically as Java code or via a special graphql dsl (called IDL).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Frank" changedate="20171111T124759Z" creationid="Frank" creationdate="20171111T123155Z">
+        <seg>“graphql-java”提供两种方法来定义Schema。用java代码来定义、用GraphQL SDL(即IDL)来定义。</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
